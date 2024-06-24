@@ -1,3 +1,4 @@
+//layouts lets you wrap all child pages inside some logic.
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -14,9 +15,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // //this file is creating layouts for all the pages that we render, ran that page inside this.
   return (
+  
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className='p-4 border-b'>Medium website</div>
+        hi there
+        {children}</body>
     </html>
   );
 }
